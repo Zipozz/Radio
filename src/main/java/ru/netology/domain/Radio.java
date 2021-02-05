@@ -7,8 +7,9 @@ package ru.netology.domain;
                 private int currentVolume;
                 private int maxVolume = 100;
                 private int minVolume = 0;
-
-
+                
+                public Radio() {
+    }
 
                 public int getCurrentStation() {
 
