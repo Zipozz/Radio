@@ -10,7 +10,7 @@ class RadioTest {
 
     @Test
     public void nextStation() {
-        int currentStation = 9;
+        int currentStation = 10;
         radio.setCurrentStation(currentStation);
         radio.nextRadioStation();
         assertEquals(0, radio.getCurrentStation());
@@ -26,7 +26,7 @@ class RadioTest {
 
     @Test
     public void nextStation2() {
-        int currentStation = 10;
+        int currentStation = 11;
         radio.setCurrentStation(currentStation);
         radio.nextRadioStation();
         assertEquals(1, radio.getCurrentStation());
@@ -37,7 +37,7 @@ class RadioTest {
         int currentStation = 0;
         radio.setCurrentStation(currentStation);
         radio.prevRadioStation();
-        assertEquals(9, radio.getCurrentStation());
+        assertEquals(10, radio.getCurrentStation());
     }
 
     @Test
@@ -45,7 +45,7 @@ class RadioTest {
         int currentStation = -1;
         radio.setCurrentStation(currentStation);
         radio.prevRadioStation();
-        assertEquals(9, radio.getCurrentStation());
+        assertEquals(10, radio.getCurrentStation());
     }
 
     @Test
@@ -71,7 +71,7 @@ class RadioTest {
         int currentStation = 2;
         radio.setCurrentStation(currentStation);
         radio.inputRadioStation(RadioStation);
-        assertEquals(2, radio.getCurrentStation());
+        assertEquals(10, radio.getCurrentStation());
     }
 
     @Test
@@ -85,23 +85,23 @@ class RadioTest {
 
     @Test
     public void volumePlus() {
-        int currentVolume = 10;
+        int currentVolume = 99;
         radio.setCurrentVolume(currentVolume);
         radio.soundVolumePlus();
-        assertEquals(10, radio.getCurrentVolume());
+        assertEquals(100, radio.getCurrentVolume());
     }
 
     @Test
     public void volumePlusOne() {
-        int currentVolume = 5;
+        int currentVolume = 77;
         radio.setCurrentVolume(currentVolume);
         radio.soundVolumePlus();
-        assertEquals(6, radio.getCurrentVolume());
+        assertEquals(78, radio.getCurrentVolume());
     }
 
     @Test
     public void volumePlusTwo() {
-        int currentVolume = 11;
+        int currentVolume = 0;
         radio.setCurrentVolume(currentVolume);
         radio.soundVolumePlus();
         assertEquals(1, radio.getCurrentVolume());
@@ -109,10 +109,10 @@ class RadioTest {
 
     @Test
     public void volumeMinus() {
-        int currentVolume = 5;
+        int currentVolume = 1;
         radio.setCurrentVolume(currentVolume);
         radio.soundVolumeMinus();
-        assertEquals(4, radio.getCurrentVolume());
+        assertEquals(0, radio.getCurrentVolume());
     }
 
     @Test
