@@ -8,8 +8,14 @@ package ru.netology.domain;
                 private int maxVolume = 100;
                 private int minVolume = 0;
                 
-                public Radio() {
-    }
+                public Radio(int currentStation, int maxStation, int minStation, int currentVolume, int maxVolume, int minVolume) {
+                this.currentStation = currentStation;
+                this.maxStation = maxStation;
+                this.minStation = minStation;
+                this.currentVolume = currentVolume;
+                this.maxVolume = maxVolume;
+                this.minVolume = minVolume;
+            }
 
                 public int getCurrentStation() {
 
